@@ -1,5 +1,5 @@
 function solution(numbers) {
-  return numbers
+  numbers = numbers
     .sort((a, b) => {
       if (String(a) + String(b) > String(b) + String(a)) {
         return -1;
@@ -8,4 +8,5 @@ function solution(numbers) {
       }
     })
     .join("");
+  return numbers[0] === "0" ? String(parseInt(numbers)) : numbers;
 }
